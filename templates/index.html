@@ -54,15 +54,8 @@
         <div class="row">
           <h2 class="text-center"> Mars Hemispheres</h2>
           <div class="col-md-12">
-            {% for hemisphere in mars.hemisphere_image_urls[0:2] %}
-            <div class="col-md-6"><img src="{{ hemisphere.img_url}}" class="img-thumbnail alt="Responsive image">
-              <h4>{{hemisphere.title}}</h4>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="col-md-12">
-            {% for hemisphere in mars.hemisphere_image_urls[2:4] %}
-            <div class="col-md-6"><img src="{{ hemisphere.img_url }}" class="img-thumbnail" alt="Responsive image">
+            {% for hemisphere in mars.hemisphere_image_urls[0:4] %}
+            <div class="col-md-3"><img src="{{ hemisphere.img_url}}" class="img-thumbnail alt="Responsive image">
               <h4>{{hemisphere.title}}</h4>
             </div>
             {% endfor %}
