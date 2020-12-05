@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <!-- Add Jumbotron to Header -->
       <div class="jumbotron text-center">
         <h1>Mission to Mars</h1>
@@ -49,5 +49,30 @@
         </div>
       </div>
     </div>
+      <!-- Section for Mars Hemisphere titles and image urls -->
+      <div class="col-md-12">
+        <div class="row">
+          <h2 class="text-center"> Mars Hemispheres</h2>
+          <div class="col-md-12">
+            {% for hemisphere in mars.hemisphere_image_urls[0:2] %}
+            <div class="col-md-6"><img src="{{ hemisphere.img_url}}" class="img-thumbnail alt="Responsive image">
+              <h4>{{hemisphere.title}}</h4>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="col-md-12">
+            {% for hemisphere in mars.hemisphere_image_urls[2:4] %}
+            <div class="col-md-6"><img src="{{ hemisphere.img_url }}" class="img-thumbnail" alt="Responsive image">
+              <h4>{{hemisphere.title}}</h4>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+           
+
+  
   </body>
 </html>
